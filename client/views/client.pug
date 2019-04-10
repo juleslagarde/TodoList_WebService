@@ -1,22 +1,22 @@
 extends layout
 
 block navbar
-  include includes/navbar_loggedout.pug
+    include includes/navbar_loggedout.pug
 
 block content
-  h1 Todo List
+    h1 Todo List
 
-  if errors
-    div(class="card text-white bg-danger mb-3")
-      div(class="card-body")
-        ul.my-errors
-          for error in errors
-            li= error.msg
-  div#div_getAll GET ALL TODO
-  div#div_get GET
-  div#div_post POST
-  div#div_put PUT2
-  div#div_delete DELETE
+    if errors
+        div(class="card text-white bg-danger mb-3")
+            div(class="card-body")
+                ul.my-errors
+                    for error in errors
+                        li= error.msg
 
-
+    div#div_getAll GET ALL TODO
+    div#div_get GET
+    div#div_post POST
+    div#div_put PUT
+    div#div_delete DELETE
+    script(src="/js/proxyClient.js")
 

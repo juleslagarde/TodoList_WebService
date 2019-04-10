@@ -8,10 +8,9 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname+'/public')); // to get static pages
 
 app.get('/', function(req, res){
-    console.log("Bang!");
-    res.render('client',{title:'hey'});
-  }
-);
+  console.log("get /");
+  res.render('client',{title:'hey'});
+});
 app.listen(port, (err,data) => {
-    console.log(`Example app listening on port ${port}! ${err}`);
-  });
+  console.log(`Example app listening on port ${port}! ${err}`);
+});
