@@ -19,6 +19,8 @@ let updateTask = {
     tags: ["Vie Quotidienne"]
 };
 
+var log = document.getElementById('log');
+
 
 const invocation = new XMLHttpRequest();
 
@@ -79,6 +81,7 @@ function handler(evtXHR){
       try{
         let response = JSON.parse(invocation.responseText);
         console.log(response);
+        log.innerText+=JSON.stringify(response);
       }catch(err){
         console.log("invocation.responseText "+invocation.responseText);
       }
